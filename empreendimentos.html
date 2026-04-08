@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empreendimentos – B6 Incorporadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="empreendimentos.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ MENU ═══════════════════════ -->
+  <header class="menu" id="menu">
+    <div class="menu__bg-left"></div>
+    <div class="menu__logo-wrap">
+      <img src="img/LOGO MENU.svg" alt="B6 Incorporadora" class="menu__logo" />
+    </div>
+    <nav class="menu__nav" id="menuNav">
+      <a href="/" class="menu__link">Home</a>
+      <span class="menu__dot"></span>
+      <a href="sobre" class="menu__link">Sobre a B6</a>
+      <span class="menu__dot"></span>
+      <a href="empreendimentos" class="menu__link menu__link--active">Empreendimentos</a>
+      <span class="menu__dot"></span>
+      <a href="contato" class="menu__link">Contato</a>
+      <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red menu__cta--mobile">
+        <span>Fale conosco</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.59.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.19z"
+            fill="white" />
+        </svg>
+      </a>
+    </nav>
+    <button class="menu__hamburger" id="menuHamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red menu__cta--desktop">
+      <span>Fale conosco</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.59.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.19z"
+          fill="white" />
+      </svg>
+    </a>
+  </header>
+
+  <!-- ═══════════════════════ HEADER SECTION ═══════════════════════ -->
+  <section class="emp-header">
+    <div class="u-container emp-header__inner">
+      <div class="overline overline--main">
+        <img src="img/svgs/imoveis.svg" alt="" class="overline__icon" />
+        <span>empreendimentos</span>
+      </div>
+      <div class="emp-header__heading">
+        <h1>Empreendimentos B6</h1>
+        <p class="emp-header__sub">Conheça nossos projetos</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ═══════════════════════ GRID DE CARDS ═══════════════════════ -->
+  <section class="emp-grid-section">
+    <div class="u-container">
+      <div class="emp-grid" id="empGrid">
+
+        <!-- Card 1 — Madrid Condomínio Clube -->
+        <a href="https://madricondominioclube.com.br/" target="_blank" rel="noopener" class="card-emp" data-status="lancamento">
+          <div class="card-emp__bg">
+            <img src="img/madrid imagem.png" alt="Madrid Condomínio Clube" />
+            <div class="card-emp__overlay"></div>
+          </div>
+          <img src="img/svgs/logo madrid.svg" alt="Logo Madri" class="card-emp__logo" />
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+              <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Madrid Condomínio Clube</h3>
+              <p>Ourinhos – SP</p>
+            </div>
+            <div class="features features--row">
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/planta.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Plantas de</span>
+                  <strong class="feature__value">42m²</strong>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/dorm.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Dormitórios</span>
+                  <strong class="feature__value">2 dorms</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 — Condomínio Tokio -->
+        <a href="tokio" class="card-emp" data-status="lancamento">
+          <div class="card-emp__bg">
+            <img src="img/svgs/tokio.jpg" alt="Condomínio Tokio" />
+            <div class="card-emp__overlay"></div>
+          </div>
+          <img src="img/svgs/tokio.svg" alt="Logo Tokio" class="card-emp__logo" />
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+              <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Condomínio Tokio</h3>
+              <p>Boituva – SP</p>
+            </div>
+            <div class="features features--row">
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/planta.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Plantas de</span>
+                  <strong class="feature__value">64m²</strong>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/dorm.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Dormitórios</span>
+                  <strong class="feature__value">2 dorms</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 — Condomínio Monções -->
+        <a href="moncoes" class="card-emp" data-status="lancamento">
+          <div class="card-emp__bg">
+            <img src="img/svgs/mon.jpg" alt="Condomínio Monções" />
+            <div class="card-emp__overlay"></div>
+          </div>
+          <img src="img/svgs/moncoes.svg" alt="Logo Monções" class="card-emp__logo" />
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+              <span>EMPREENDIMENTO | <strong>RESIDENCIAL</strong></span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Condomínio Monções</h3>
+              <p>Porto Feliz – SP</p>
+            </div>
+            <div class="features features--row">
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/planta.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Plantas de</span>
+                  <strong class="feature__value">42m²</strong>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__icon feature__icon--ghost">
+                  <img src="img/svgs/dorm.svg" alt="" />
+                </div>
+                <div class="feature__text">
+                  <span class="feature__label">Dormitórios</span>
+                  <strong class="feature__value">2 dorms</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer" id="contato">
+    <!-- Contact top section -->
+    <div class="footer__contact-section">
+      <div class="u-container footer__contact-inner">
+        <div class="section-title section-title--center">
+          <div class="overline overline--main">
+            <img src="img/svgs/phone.svg" alt="" class="overline__icon" />
+            <span>fale conosco</span>
+          </div>
+          <div class="heading-group heading-group--center">
+            <h2>Entre em contato com a B6</h2>
+            <p class="heading-sub">fale com um especialista e tire suas dúvidas</p>
+          </div>
+        </div>
+        <div class="contact-cards">
+          <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <img src="img/svgs/Contato.svg" alt="" />
+            </div>
+            <span class="contact-card__label">Contato para</span>
+            <strong class="contact-card__title">Clientes</strong>
+          </a>
+          <div class="contact-card__divider"></div>
+          <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <img src="img/svgs/forn.svg" alt="" />
+            </div>
+            <span class="contact-card__label">Contato para</span>
+            <strong class="contact-card__title">Fornecedores</strong>
+          </a>
+          <div class="contact-card__divider"></div>
+          <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <img src="img/svgs/trabalhe.svg" alt="" />
+            </div>
+            <span class="contact-card__label">Contato para</span>
+            <strong class="contact-card__title">Trabalhe conosco</strong>
+          </a>
+          <div class="contact-card__divider"></div>
+          <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <img src="img/svgs/quero vender.svg" alt="" />
+            </div>
+            <span class="contact-card__label">Quero vender</span>
+            <strong class="contact-card__title">Meu terreno</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer__bottom">
+      <div class="u-container footer__bottom-inner">
+        <div class="footer__top-row">
+          <img src="img/logo final.svg" alt="B6 Incorporadora" class="footer__logo" />
+          <div class="footer__social">
+            <span>Siga a B6 nas redes sociais</span>
+            <div class="footer__social-icons">
+              <a href="https://www.instagram.com/construtorab6" aria-label="Facebook">
+                <img src="img/svgs/Facebook.svg" alt="Facebook" />
+              </a>
+              <a href="https://www.instagram.com/construtorab6/" aria-label="Instagram">
+                <img src="img/svgs/instagram.svg" alt="Instagram" />
+              </a>
+              <a href="https://www.linkedin.com/company/construtora-b6-projetos-engenharia/" aria-label="LinkedIn">
+                <img src="img/svgs/Linkedin.svg" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="footer__divider" />
+        <nav class="footer__nav">
+          <a href="sobre" class="footer__nav-link">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
+              <path d="M1 1l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Sobre a B6
+          </a>
+          <a href="empreendimentos" class="footer__nav-link">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
+              <path d="M1 1l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Empreendimentos
+          </a>
+          <a href="contato" class="footer__nav-link">
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
+              <path d="M1 1l4 4-4 4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Contato
+          </a>
+        </nav>
+        <hr class="footer__divider" />
+        <div class="footer__contact-info">
+          <div class="footer__contact-item">
+            <img src="img/loc.svg" alt="" />
+            <span>Rua Expedicionário Souza Filho, 40 – Centro, Boituva – SP, CEP 18550-105</span>
+          </div>
+          <div class="footer__contact-item">
+            <img src="img/svgs/email.svg" alt="" />
+            <a href="mailto:contato@b6construtora.com.br">contato@b6construtora.com.br</a>
+          </div>
+          <div class="footer__contact-item">
+            <img src="img/svgs/telefone.svg" alt="" />
+            <a href="tel:+551532635155">(15) 3263-5155</a>
+          </div>
+          <div class="footer__contact-item">
+            <img src="img/svgs/whats.svg" alt="" />
+            <a href="https://wa.me/5515974049512">(15) 97404-9512</a>
+          </div>
+        </div>
+        <hr class="footer__divider" />
+        <div class="footer__copyright">
+          <span>© Copyright 2026. All Rights Reserved | Política de privacidade</span>
+          <div class="footer__made-by">
+            <span>Feito com ♥ por</span>
+            <a href="https://balzani.com.br" target="_blank" rel="noopener">
+              <img src="img/logo balzani.svg" alt="Balzani" class="footer__agency" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="empreendimentos.js"></script>
+</body>
+
+</html>
