@@ -23,6 +23,7 @@
   --font: 'Inter', sans-serif;
   --r: 8px;
   --shadow: 0 40px 40px -25px rgba(0, 0, 0, .25);
+  --fill-0: #ffffff;
 }
 
 /* ── Reset ── */
@@ -713,77 +714,339 @@ button {
 ════════════════════════════════════════ */
 .session-mcmv {
   background: #fff;
-  padding: 72px 0;
 }
 
-.mcmv__inner {
+/* ── Hero ── */
+.mcmv__hero {
+  background: #1e1e1e;
+  padding: 72px 0 64px;
+}
+
+.mcmv__hero-inner {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 40px;
 }
 
-/* left column */
-.mcmv__left {
+.mcmv__hero-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: flex-start;
+  max-width: 560px;
 }
 
-.mcmv__left h2 {
-  font-size: 28px;
+.mcmv__hero-text h2 {
+  font-size: 30px;
   font-weight: 700;
-  color: #2f2f2f;
-  line-height: 1.25;
+  color: #fff;
+  line-height: 1.2;
   margin: 0;
 }
 
-.mcmv__left p {
+.mcmv__highlight {
+  color: var(--red, #e73c38);
+}
+
+.mcmv__hero-text p {
   font-size: 15px;
-  color: #626261;
+  color: #bfbfbf;
   line-height: 1.7;
   margin: 0;
 }
 
-/* right — benefits */
-.mcmv__benefits {
+.mcmv__hero-stats {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mcmv__stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 12px;
+  gap: 4px;
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.mcmv__stat:last-child {
+  border-right: none;
+}
+
+.mcmv__stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--red, #e73c38);
+  line-height: 1;
+}
+
+.mcmv__stat-label {
+  font-size: 11px;
+  color: #bfbfbf;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+/* ── Faixas de renda ── */
+.mcmv__faixas-section {
+  padding: 64px 0;
+  background: #f7f7f7;
+}
+
+.mcmv__faixas-header {
+  margin-bottom: 32px;
+}
+
+.mcmv__faixas-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin: 0 0 8px;
+}
+
+.mcmv__faixas-header p {
+  font-size: 14px;
+  color: #626261;
+  margin: 0;
+}
+
+.mcmv__faixas-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
-.mcmv__benefit {
-  background: #2f2f2f;
-  border-radius: 8px;
-  padding: 20px 16px;
+.mcmv__faixa {
+  background: #fff;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: border-color .2s, box-shadow .2s;
 }
 
-.mcmv__benefit-icon {
-  width: 48px;
-  height: 48px;
+.mcmv__faixa:hover {
+  border-color: var(--red, #e73c38);
+  box-shadow: 0 4px 20px rgba(231, 60, 56, .1);
+}
+
+.mcmv__faixa--destaque {
+  border-color: var(--red, #e73c38);
+  background: #fff8f8;
+}
+
+.mcmv__faixa-tag {
+  display: inline-flex;
+  align-items: center;
   background: var(--red, #e73c38);
-  border-radius: 8px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.mcmv__faixa--destaque .mcmv__faixa-tag {
+  background: var(--red, #e73c38);
+}
+
+.mcmv__faixa-renda {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+.mcmv__faixa p {
+  font-size: 13px;
+  color: #626261;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mcmv__faixa-beneficios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mcmv__faixa-beneficios li {
+  font-size: 13px;
+  color: #2f2f2f;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+}
+
+.mcmv__faixa-beneficios li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red, #e73c38);
   flex-shrink: 0;
 }
 
-.mcmv__benefit h3 {
-  font-size: 14px;
+/* ── Como contratar ── */
+.mcmv__steps-section {
+  padding: 64px 0;
+  background: #fff;
+}
+
+.mcmv__steps-header {
+  margin-bottom: 36px;
+}
+
+.mcmv__steps-header h3 {
+  font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: #2f2f2f;
+  margin: 0 0 8px;
+}
+
+.mcmv__steps-header p {
+  font-size: 14px;
+  color: #626261;
   margin: 0;
+}
+
+.mcmv__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.mcmv__step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.mcmv__step-num {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: var(--red, #e73c38);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mcmv__step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.mcmv__step-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.mcmv__step-body p {
+  font-size: 13px;
+  color: #626261;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── FAQ ── */
+.mcmv__faq-section {
+  padding: 64px 0;
+  background: #f7f7f7;
+}
+
+.mcmv__faq-header {
+  margin-bottom: 28px;
+}
+
+.mcmv__faq-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.mcmv__faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.mcmv__faq-item {
+  border-bottom: 1.5px solid #e5e5e5;
+}
+
+.mcmv__faq-item:last-child {
+  border-bottom: none;
+}
+
+.mcmv__faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.mcmv__faq-btn span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2f2f2f;
   line-height: 1.3;
 }
 
-.mcmv__benefit p {
-  font-size: 13px;
-  color: #bfbfbf;
+.mcmv__faq-icon {
+  flex-shrink: 0;
+  transition: transform .25s;
+}
+
+.mcmv__faq-item.is-open .mcmv__faq-icon {
+  transform: rotate(180deg);
+}
+
+.mcmv__faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+}
+
+.mcmv__faq-item.is-open .mcmv__faq-answer {
+  display: block;
+}
+
+.mcmv__faq-answer p {
+  font-size: 14px;
+  color: #626261;
+  line-height: 1.7;
   margin: 0;
-  line-height: 1.5;
 }
 
 /* ════════════════════════════════════════
@@ -804,7 +1067,7 @@ button {
   left: 0;
   right: 0;
   height: 280px;
-  background: var(--red-darker);
+  background: #ea3b37;
 }
 
 .session-sobre .u-container {
@@ -928,6 +1191,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .contact-card__icon img {
@@ -958,7 +1222,7 @@ button {
 }
 
 .footer__bottom {
-  background: linear-gradient(186deg, var(--red-darker) 20%, var(--darker) 100%);
+  background: linear-gradient(to bottom, #eb5650 0%, var(--darker) 85%);
   padding: 96px 20px 40px;
 }
 
@@ -1115,14 +1379,12 @@ button {
   }
 
   /* MCMV */
-  .mcmv__benefits {
+  .mcmv__faixas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .mcmv__benefit {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
+  .mcmv__steps {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Overline */
@@ -1442,22 +1704,55 @@ button {
   }
 
   /* MCMV */
-  .mcmv__inner {
+  .mcmv__hero-inner {
     flex-direction: row;
     align-items: center;
-    gap: 80px;
+    gap: 64px;
   }
 
-  .mcmv__left {
-    flex: 0 0 380px;
+  .mcmv__hero-text {
+    flex: 0 0 45%;
+    max-width: none;
   }
 
-  .mcmv__left h2 {
-    font-size: 36px;
+  .mcmv__hero-text h2 {
+    font-size: 40px;
   }
 
-  .mcmv__benefits {
-    flex: 1;
+  .mcmv__hero-stats {
+    flex: 1 1 0;
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .mcmv__stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding: 24px 20px;
+  }
+
+  .mcmv__stat:last-child {
+    border-bottom: none;
+  }
+
+  .mcmv__stat-value {
+    font-size: 32px;
+  }
+
+  .mcmv__stat-label {
+    font-size: 13px;
+  }
+
+  .mcmv__stat {
+    padding: 28px 32px;
+  }
+
+  .mcmv__faixas-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mcmv__steps {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* Menu — full desktop */

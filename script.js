@@ -78,6 +78,24 @@ if (certSlider) {
   });
 }
 
+// ── FAQ MCMV accordion ──
+document.querySelectorAll('.mcmv__faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.mcmv__faq-item');
+    const isOpen = item.classList.contains('is-open');
+    // fecha todos
+    document.querySelectorAll('.mcmv__faq-item.is-open').forEach(el => {
+      el.classList.remove('is-open');
+      el.querySelector('.mcmv__faq-btn').setAttribute('aria-expanded', 'false');
+    });
+    // abre o clicado (toggle)
+    if (!isOpen) {
+      item.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
 // ── Botão "Role para baixo" ──
 const scrollDown = document.querySelector('.arrow-btn--down');
 if (scrollDown) {

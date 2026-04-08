@@ -261,7 +261,7 @@
 }
 
 .contato-social__banner {
-  background: linear-gradient(to right, #2f2f2f, var(--red-darker, #b91511));
+  background: linear-gradient(to right, #2f2f2f, #eb5650);
   border-radius: 8px;
   padding: 56px 40px;
   display: flex;

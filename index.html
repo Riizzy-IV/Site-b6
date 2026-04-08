@@ -384,85 +384,221 @@
 
   <!-- ═══════════════════════ MCMV ═══════════════════════ -->
   <section class="session-mcmv" id="mcmv">
-    <div class="u-container mcmv__inner">
 
-      <div class="mcmv__left">
-        <div class="overline overline--main">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="overline__icon">
-            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="#e73c38" stroke-width="1.6"
-              stroke-linejoin="round" />
-            <path d="M9 21V12h6v9" stroke="#e73c38" stroke-width="1.6" stroke-linejoin="round" />
-          </svg>
-          <span>minha casa minha vida</span>
-        </div>
-        <h2>Seu imóvel com subsídio do governo</h2>
-        <p>Os empreendimentos da B6 são elegíveis ao programa <strong>Minha Casa Minha Vida (MCMV)</strong>, com
-          condições especiais de financiamento pela Caixa Econômica Federal para tornar a conquista da casa própria mais
-          acessível.</p>
-        <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red">
-          <span>Quero saber mais</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.59.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.19z"
-              fill="white" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="mcmv__benefits">
-        <div class="mcmv__benefit">
-          <div class="mcmv__benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.6" />
-              <path d="M12 7v5l3 3" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-            </svg>
-          </div>
-          <div>
-            <h3>Subsídio de até R$ 55.000</h3>
-            <p>Reduza o valor do imóvel com recursos diretos do governo</p>
-          </div>
-        </div>
-        <div class="mcmv__benefit">
-          <div class="mcmv__benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="6" width="18" height="13" rx="2" stroke="white" stroke-width="1.6" />
-              <path d="M3 10h18" stroke="white" stroke-width="1.6" />
-              <circle cx="8" cy="15" r="1.2" fill="white" />
-            </svg>
-          </div>
-          <div>
-            <h3>Use seu FGTS</h3>
-            <p>Utilize o saldo do FGTS como entrada ou para amortizar o financiamento</p>
-          </div>
-        </div>
-        <div class="mcmv__benefit">
-          <div class="mcmv__benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="1.6" stroke-linejoin="round" />
-              <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" stroke-width="1.6" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div>
-            <h3>Juros a partir de 4% a.a.</h3>
-            <p>Taxas muito abaixo do mercado convencional</p>
-          </div>
-        </div>
-        <div class="mcmv__benefit">
-          <div class="mcmv__benefit-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="1.6" stroke-linecap="round"
+    <!-- Hero MCMV -->
+    <div class="mcmv__hero">
+      <div class="u-container mcmv__hero-inner">
+        <div class="mcmv__hero-text">
+          <div class="overline overline--negative">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="overline__icon">
+              <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="white" stroke-width="1.6"
                 stroke-linejoin="round" />
-              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" stroke="white" stroke-width="1.6" />
+              <path d="M9 21V12h6v9" stroke="white" stroke-width="1.6" stroke-linejoin="round" />
             </svg>
+            <span>minha casa minha vida</span>
           </div>
-          <div>
-            <h3>Até 360 meses</h3>
-            <p>Parcelas que se adaptam à sua realidade financeira</p>
+          <h2>Seu apê com subsídio<br>de até <span class="mcmv__highlight">R$ 55.000</span><br>e entrada facilitada</h2>
+          <p>Os empreendimentos da B6 são elegíveis ao programa <strong>Minha Casa Minha Vida (MCMV)</strong>, com
+            condições especiais de financiamento pela Caixa Econômica Federal. Conquiste a casa própria com parcelas que
+            cabem no seu bolso.</p>
+          <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red">
+            <span>Quero saber mais</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.59.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.19z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+        <div class="mcmv__hero-stats">
+          <div class="mcmv__stat">
+            <span class="mcmv__stat-value">R$ 55mil</span>
+            <span class="mcmv__stat-label">de subsídio</span>
+          </div>
+          <div class="mcmv__stat">
+            <span class="mcmv__stat-value">4% a.a.</span>
+            <span class="mcmv__stat-label">juros mínimos</span>
+          </div>
+          <div class="mcmv__stat">
+            <span class="mcmv__stat-value">360x</span>
+            <span class="mcmv__stat-label">parcelas</span>
           </div>
         </div>
       </div>
-
     </div>
+
+    <!-- Faixas de renda -->
+    <div class="mcmv__faixas-section">
+      <div class="u-container">
+        <div class="mcmv__faixas-header">
+          <h3>Qual é a sua faixa de renda?</h3>
+          <p>Veja qual faixa do programa se encaixa no seu perfil e descubra os benefícios disponíveis</p>
+        </div>
+        <div class="mcmv__faixas-grid">
+          <div class="mcmv__faixa mcmv__faixa--destaque">
+            <div class="mcmv__faixa-tag">Faixa 1</div>
+            <div class="mcmv__faixa-renda">Até R$ 2.850</div>
+            <p>Maior subsídio disponível e taxas de juros mais baixas do programa</p>
+            <ul class="mcmv__faixa-beneficios">
+              <li>Subsídio de até R$ 55.000</li>
+              <li>Juros a partir de 4% a.a.</li>
+              <li>Entrada facilitada</li>
+            </ul>
+          </div>
+          <div class="mcmv__faixa">
+            <div class="mcmv__faixa-tag">Faixa 2</div>
+            <div class="mcmv__faixa-renda">Até R$ 4.400</div>
+            <p>Subsídio parcial com boas condições de financiamento</p>
+            <ul class="mcmv__faixa-beneficios">
+              <li>Subsídio de até R$ 29.000</li>
+              <li>Juros a partir de 4,75% a.a.</li>
+              <li>Use o FGTS</li>
+            </ul>
+          </div>
+          <div class="mcmv__faixa">
+            <div class="mcmv__faixa-tag">Faixa 3</div>
+            <div class="mcmv__faixa-renda">Até R$ 8.000</div>
+            <p>Financiamento com taxas reduzidas e uso do FGTS</p>
+            <ul class="mcmv__faixa-beneficios">
+              <li>Subsídio de até R$ 3.000</li>
+              <li>Juros a partir de 7,66% a.a.</li>
+              <li>Use o FGTS</li>
+            </ul>
+          </div>
+          <div class="mcmv__faixa">
+            <div class="mcmv__faixa-tag">Faixa 4</div>
+            <div class="mcmv__faixa-renda">Até R$ 12.000</div>
+            <p>Financiamento habitacional com condições especiais</p>
+            <ul class="mcmv__faixa-beneficios">
+              <li>Sem subsídio direto</li>
+              <li>Taxas de mercado</li>
+              <li>Use o FGTS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Como contratar -->
+    <div class="mcmv__steps-section">
+      <div class="u-container">
+        <div class="mcmv__steps-header">
+          <h3>Como contratar o MCMV?</h3>
+          <p>Veja o passo a passo para realizar o sonho da casa própria</p>
+        </div>
+        <div class="mcmv__steps">
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">01</div>
+            <div class="mcmv__step-body">
+              <h4>Escolha seu imóvel</h4>
+              <p>Conheça os empreendimentos da B6 elegíveis ao MCMV e escolha o que mais combina com você</p>
+            </div>
+          </div>
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">02</div>
+            <div class="mcmv__step-body">
+              <h4>Verifique sua renda</h4>
+              <p>Identifique sua faixa de renda familiar para saber quais benefícios e subsídios você tem direito</p>
+            </div>
+          </div>
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">03</div>
+            <div class="mcmv__step-body">
+              <h4>Reúna a documentação</h4>
+              <p>Separe RG, CPF, comprovantes de renda, extrato do FGTS e certidão de estado civil</p>
+            </div>
+          </div>
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">04</div>
+            <div class="mcmv__step-body">
+              <h4>Análise de crédito</h4>
+              <p>A Caixa Econômica Federal analisa seu perfil e aprova o financiamento com as condições do programa</p>
+            </div>
+          </div>
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">05</div>
+            <div class="mcmv__step-body">
+              <h4>Assinatura do contrato</h4>
+              <p>Após aprovação, assine o contrato e acompanhe a obra até a entrega das chaves</p>
+            </div>
+          </div>
+          <div class="mcmv__step">
+            <div class="mcmv__step-num">06</div>
+            <div class="mcmv__step-body">
+              <h4>Receba as chaves</h4>
+              <p>Com tudo aprovado, é hora de receber as chaves do seu novo lar e começar uma nova fase!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mcmv__faq-section">
+      <div class="u-container">
+        <div class="mcmv__faq-header">
+          <h3>Perguntas frequentes</h3>
+        </div>
+        <div class="mcmv__faq-list" id="mcmvFaq">
+          <div class="mcmv__faq-item">
+            <button class="mcmv__faq-btn" aria-expanded="false">
+              <span>O que é o subsídio do MCMV?</span>
+              <svg class="mcmv__faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5l5 5 5-5" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mcmv__faq-answer">
+              <p>O subsídio é um desconto concedido pelo governo diretamente no valor do imóvel. Dependendo da sua faixa
+                de renda familiar, você pode receber até R$ 55.000 de desconto, sem precisar devolver esse valor.</p>
+            </div>
+          </div>
+          <div class="mcmv__faq-item">
+            <button class="mcmv__faq-btn" aria-expanded="false">
+              <span>Posso usar o FGTS no MCMV?</span>
+              <svg class="mcmv__faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5l5 5 5-5" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mcmv__faq-answer">
+              <p>Sim! Você pode utilizar o saldo do FGTS como entrada, para complementar o subsídio ou para amortizar
+                parcelas do financiamento. É necessário ter pelo menos 3 anos de trabalho sob o regime do FGTS (não
+                precisam ser consecutivos).</p>
+            </div>
+          </div>
+          <div class="mcmv__faq-item">
+            <button class="mcmv__faq-btn" aria-expanded="false">
+              <span>Quais documentos são necessários?</span>
+              <svg class="mcmv__faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5l5 5 5-5" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mcmv__faq-answer">
+              <p>Documento de identidade (RG ou CNH), CPF, comprovante de residência, comprovantes de renda dos últimos
+                3 meses, extrato do FGTS dos últimos 2 anos, certidão de estado civil e declaração de imposto de renda
+                (se aplicável).</p>
+            </div>
+          </div>
+          <div class="mcmv__faq-item">
+            <button class="mcmv__faq-btn" aria-expanded="false">
+              <span>Posso ter outro imóvel e ainda assim usar o MCMV?</span>
+              <svg class="mcmv__faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5l5 5 5-5" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mcmv__faq-answer">
+              <p>Não. Para participar do MCMV você não pode ser proprietário, cessionário ou promitente comprador de
+                outro imóvel residencial. Além disso, não pode ter recebido benefícios de programas habitacionais do
+                governo anteriormente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ═══════════════════════ SOBRE ═══════════════════════ -->
