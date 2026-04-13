@@ -5,14 +5,14 @@
 /* ── Page Hero ── */
 .mcmv-page-hero {
   background: #fff;
-  padding: 72px 0 48px;
+  padding: 72px 0 32px;
   border-bottom: 1px solid #e8e8e8;
 }
 
 .mcmv-page-hero__inner {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
 }
 
 .mcmv-page-hero__text {
@@ -290,7 +290,7 @@
 @media (min-width: 1024px) {
   .mcmv-page-hero {
     padding-top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
   .mcmv-page-hero__inner {
