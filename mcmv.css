@@ -4,8 +4,9 @@
 
 /* ── Page Hero ── */
 .mcmv-page-hero {
-  background: #0d2137;
+  background: #fff;
   padding: 80px 0 64px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .mcmv-page-hero__inner {
@@ -25,14 +26,14 @@
 .mcmv-page-hero__text h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  color: #1e1e1e;
   line-height: 1.2;
   margin: 0;
 }
 
 .mcmv-page-hero__text p {
   font-size: 15px;
-  color: #bfbfbf;
+  color: #626261;
   line-height: 1.7;
   margin: 0;
 }
@@ -43,6 +44,84 @@
   background: #fff;
   border-radius: 12px;
   padding: 10px;
+  border: 1px solid #e8e8e8;
+}
+
+/* ── Quem pode participar ── */
+.mcmv-quem-section {
+  background: #f7f7f7;
+  padding: 64px 0;
+}
+
+.mcmv-quem-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mcmv-quem__text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin: 0 0 12px;
+}
+
+.mcmv-quem__text p {
+  font-size: 15px;
+  color: #626261;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.mcmv-quem__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mcmv-quem__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  border: 1px solid #e8e8e8;
+}
+
+.mcmv-quem__item-icon {
+  width: 32px;
+  height: 32px;
+  background: #2e9e5b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mcmv-quem__item p {
+  font-size: 14px;
+  color: #2f2f2f;
+  margin: 0;
+  line-height: 1.5;
+  padding-top: 6px;
+}
+
+@media (min-width: 1024px) {
+  .mcmv-quem-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+  }
+
+  .mcmv-quem__text {
+    flex: 0 0 300px;
+  }
+
+  .mcmv-quem__list {
+    flex: 1;
+  }
 }
 
 /* ── Faixas obs ── */
