@@ -68,6 +68,21 @@ if (hamburger && menuNav) {
     });
   });
 
+  const btnPrev = document.getElementById('heroPrev');
+  const btnNext = document.getElementById('heroNext');
+
+  if (btnPrev) btnPrev.addEventListener('click', () => {
+    clearInterval(timer);
+    goTo(current - 1);
+    startAuto();
+  });
+
+  if (btnNext) btnNext.addEventListener('click', () => {
+    clearInterval(timer);
+    goTo(current + 1);
+    startAuto();
+  });
+
   startAuto();
 })();
 
