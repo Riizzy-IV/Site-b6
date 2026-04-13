@@ -1132,7 +1132,7 @@ button {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  background: var(--red, #e73c38);
+  background: #2e9e5b;
   color: #fff;
   font-size: 15px;
   font-weight: 700;

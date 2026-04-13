@@ -204,7 +204,8 @@
 }
 
 .mcmv-benefit-card {
-  background: #2f2f2f;
+  background: #fff;
+  border: 1px solid #e8e8e8;
   border-radius: 10px;
   padding: 24px 20px;
   display: flex;
@@ -226,13 +227,13 @@
 .mcmv-benefit-card h4 {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: #1e1e1e;
   margin: 0;
 }
 
 .mcmv-benefit-card p {
   font-size: 13px;
-  color: #bfbfbf;
+  color: #626261;
   margin: 0;
   line-height: 1.5;
 }
