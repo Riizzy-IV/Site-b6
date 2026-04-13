@@ -64,22 +64,36 @@
     </div>
   </section>
 
-<!-- ═══════════════════════ GRID DE CARDS ═══════════════════════ -->
-  <section class="emp-grid-section">
-    <div class="u-container">
-      <div class="emp-grid" id="empGrid">
+<!-- ═══════════════════════ FILTROS ═══════════════════════ -->
+  <section class="emp-filters">
+    <div class="u-container emp-filters__inner">
+      <button class="filter-btn filter-btn--active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="condominios">Condomínios</button>
+      <button class="filter-btn" data-filter="comerciais">Comerciais</button>
+      <button class="filter-btn" data-filter="industriais">Industriais</button>
+    </div>
+  </section>
 
-        <!-- Card 1 — Madrid Condomínio Clube -->
-        <a href="https://madricondominioclube.com.br/" target="_blank" rel="noopener" class="card-emp" data-status="lancamento">
+  <!-- ═══════════════════════ CONDOMÍNIOS ═══════════════════════ -->
+  <section class="emp-grid-section emp-category" data-category="condominios">
+    <div class="u-container">
+      <div class="emp-category__header">
+        <span class="emp-category__tag">Condomínios</span>
+        <div class="emp-category__line"></div>
+      </div>
+      <div class="emp-grid">
+
+        <!-- Madrid Condomínio Clube -->
+        <a href="https://madricondominioclube.com.br/" target="_blank" rel="noopener" class="card-emp">
           <div class="card-emp__bg">
             <img src="img/madrid imagem.png" alt="Madrid Condomínio Clube" />
             <div class="card-emp__overlay"></div>
           </div>
-          <img src="img/svgs/logo madrid.svg" alt="Logo Madri" class="card-emp__logo" />
+          <img src="img/svgs/logo madrid.svg" alt="Logo Madrid" class="card-emp__logo" />
           <div class="card-emp__content">
             <div class="overline overline--negative">
               <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
-              <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+              <span>LANÇAMENTO</span>
             </div>
             <div class="card-emp__info">
               <h3>Madrid Condomínio Clube</h3>
@@ -108,8 +122,8 @@
           </div>
         </a>
 
-        <!-- Card 2 — Condomínio Tokio -->
-        <a href="tokio" class="card-emp" data-status="lancamento">
+        <!-- Condomínio Tokio -->
+        <a href="tokio" class="card-emp">
           <div class="card-emp__bg">
             <img src="img/svgs/tokio.jpg" alt="Condomínio Tokio" />
             <div class="card-emp__overlay"></div>
@@ -118,7 +132,7 @@
           <div class="card-emp__content">
             <div class="overline overline--negative">
               <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
-              <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+              <span>LANÇAMENTO</span>
             </div>
             <div class="card-emp__info">
               <h3>Condomínio Tokio</h3>
@@ -147,8 +161,8 @@
           </div>
         </a>
 
-        <!-- Card 3 — Condomínio Monções -->
-        <a href="moncoes" class="card-emp" data-status="lancamento">
+        <!-- Condomínio Monções -->
+        <a href="moncoes" class="card-emp">
           <div class="card-emp__bg">
             <img src="img/svgs/mon.jpg" alt="Condomínio Monções" />
             <div class="card-emp__overlay"></div>
@@ -157,7 +171,7 @@
           <div class="card-emp__content">
             <div class="overline overline--negative">
               <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
-              <span>EMPREENDIMENTO | <strong>RESIDENCIAL</strong></span>
+              <span>EM ANDAMENTO</span>
             </div>
             <div class="card-emp__info">
               <h3>Condomínio Monções</h3>
@@ -185,6 +199,253 @@
             </div>
           </div>
         </a>
+
+        <!-- Residencial Faculdade -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Residencial Faculdade</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residencial Riviera -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Residencial Riviera</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residencial Bonvent -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Residencial Bonvent</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Edifício Desembargador Amaral Vieira -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Edifício Desembargador Amaral Vieira</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residencial Paris -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Residencial Paris</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ COMERCIAIS ═══════════════════════ -->
+  <section class="emp-grid-section emp-category emp-category--alt">
+    <div class="u-container">
+      <div class="emp-category__header">
+        <span class="emp-category__tag">Comerciais</span>
+        <div class="emp-category__line"></div>
+      </div>
+      <div class="emp-grid">
+
+        <!-- Galpão Spazio La Bari -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão Spazio La Bari</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subway -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Subway</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão Restaurante The One -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão Restaurante The One</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão MovelSul -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão MovelSul</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 5 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 5</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ INDUSTRIAIS ═══════════════════════ -->
+  <section class="emp-grid-section emp-category">
+    <div class="u-container">
+      <div class="emp-category__header">
+        <span class="emp-category__tag">Industriais</span>
+        <div class="emp-category__line"></div>
+      </div>
+      <div class="emp-grid">
+
+        <!-- Galpão 9 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 9</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 2 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 2</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 3 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 3</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 4 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 4</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 6 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 6</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 7 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 7</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galpão 8 -->
+        <div class="card-emp card-emp--placeholder">
+          <div class="card-emp__overlay"></div>
+          <div class="card-emp__content">
+            <div class="overline overline--negative">
+              <span class="emp-badge emp-badge--entregue">ENTREGUE</span>
+            </div>
+            <div class="card-emp__info">
+              <h3>Galpão 8</h3>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>

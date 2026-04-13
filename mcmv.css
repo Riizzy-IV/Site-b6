@@ -1,0 +1,184 @@
+/* ══════════════════════════════════════════
+   MCMV PAGE — mobile-first
+   ══════════════════════════════════════════ */
+
+/* ── Page Hero ── */
+.mcmv-page-hero {
+  background: #0d2137;
+  padding: 80px 0 64px;
+}
+
+.mcmv-page-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mcmv-page-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 560px;
+}
+
+.mcmv-page-hero__text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.mcmv-page-hero__text p {
+  font-size: 15px;
+  color: #bfbfbf;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.mcmv-page__logo {
+  width: 120px;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* ── Faixas obs ── */
+.mcmv__faixas-obs {
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* ── Benefícios ── */
+.mcmv-benefits-section {
+  padding: 64px 0;
+  background: #fff;
+}
+
+.mcmv-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.mcmv-benefit-card {
+  background: #2f2f2f;
+  border-radius: 10px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mcmv-benefit-card__icon {
+  width: 48px;
+  height: 48px;
+  background: #2e9e5b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mcmv-benefit-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.mcmv-benefit-card p {
+  font-size: 13px;
+  color: #bfbfbf;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── CTA ── */
+.mcmv-cta-section {
+  background: #ea3b37;
+  padding: 56px 0;
+}
+
+.mcmv-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.mcmv-cta-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.mcmv-cta-text p {
+  font-size: 15px;
+  color: rgba(255,255,255,.85);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   TABLET  ≥ 768px
+   ══════════════════════════════════════════ */
+@media (min-width: 768px) {
+  .mcmv-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mcmv-benefit-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mcmv-benefit-card__icon {
+    flex-shrink: 0;
+  }
+}
+
+/* ══════════════════════════════════════════
+   DESKTOP  ≥ 1024px
+   ══════════════════════════════════════════ */
+@media (min-width: 1024px) {
+  .mcmv-page-hero {
+    padding-top: 120px;
+  }
+
+  .mcmv-page-hero__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .mcmv-page-hero__text {
+    flex: 0 0 45%;
+    max-width: none;
+  }
+
+  .mcmv-page-hero__text h1 {
+    font-size: 44px;
+  }
+
+  .mcmv-benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mcmv-cta-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mcmv-cta-text h3 {
+    font-size: 30px;
+  }
+}
