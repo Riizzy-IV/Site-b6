@@ -5,7 +5,7 @@
 /* ── Page Hero ── */
 .mcmv-page-hero {
   background: #fff;
-  padding: 100px 0 72px;
+  padding: 72px 0 48px;
   border-bottom: 1px solid #e8e8e8;
 }
 
@@ -289,8 +289,8 @@
    ══════════════════════════════════════════ */
 @media (min-width: 1024px) {
   .mcmv-page-hero {
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .mcmv-page-hero__inner {
