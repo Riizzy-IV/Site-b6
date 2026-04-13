@@ -30,6 +30,47 @@ if (hamburger && menuNav) {
   });
 }
 
+// ── Hero Slider ──
+(function () {
+  const bgs      = document.querySelectorAll('.hero__bg-img');
+  const contents = document.querySelectorAll('.hero__slide-content');
+  const bars     = document.querySelectorAll('.hero__bar');
+  const dots     = document.querySelectorAll('.hero__dot');
+
+  if (!bgs.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    bgs[current].classList.remove('is-active');
+    contents[current].classList.remove('is-active');
+    bars[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+
+    current = (index + bgs.length) % bgs.length;
+
+    bgs[current].classList.add('is-active');
+    contents[current].classList.add('is-active');
+    bars[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+  }
+
+  function startAuto() {
+    timer = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(Number(dot.dataset.goto));
+      startAuto();
+    });
+  });
+
+  startAuto();
+})();
+
 // ── Carousel de imóveis (desktop) ──
 const cardsWrap = document.getElementById('cardsWrap');
 const btnPrev   = document.querySelector('.carousel-btn--prev');

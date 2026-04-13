@@ -49,72 +49,123 @@
     </a>
   </header>
 
-  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <!-- ═══════════════════════ HERO SLIDER ═══════════════════════ -->
   <section class="hero" id="home">
+
+    <!-- Backgrounds (fade entre slides) -->
     <div class="hero__bg">
-      <img src="img/hero 01.avif" alt="" class="hero__bg-img" />
+      <img src="img/madrid imagem.png" alt="" class="hero__bg-img is-active" data-bg="0" />
+      <img src="img/svgs/tokio.jpg"    alt="" class="hero__bg-img"           data-bg="1" />
+      <img src="img/svgs/mon.jpg"      alt="" class="hero__bg-img"           data-bg="2" />
       <div class="hero__overlay hero__overlay--gradient"></div>
       <div class="hero__overlay hero__overlay--dark"></div>
     </div>
 
-    <!-- Content -->
+    <!-- Conteúdo dos slides -->
     <div class="hero__content">
-      <div class="hero__info">
-        <div class="overline overline--negative">
-          <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
-          <span>CONHEÇA NOSSO PRÓXIMO LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+
+      <!-- Slide 0 — Madrid -->
+      <div class="hero__slide-content is-active" data-slide="0">
+        <div class="hero__info">
+          <div class="overline overline--negative">
+            <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+            <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+          </div>
+          <div class="hero__spacer"></div>
+          <div class="hero__heading">
+            <h1>Madri Condomínio Clube</h1>
+            <p class="hero__sub">OURINHOS – SP</p>
+          </div>
         </div>
-        <div class="hero__spacer"></div>
-        <div class="hero__heading">
-          <h1>Madri Condomínio Clube</h1>
-          <p class="hero__sub">OURINHOS – SP</p>
-        </div>
+        <a href="https://madricondominioclube.com.br/" target="_blank" rel="noopener" class="btn btn--orange">
+          <span>Saiba mais</span>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+            <path d="M1 6.5h13M8.5 1l6 5.5-6 5.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
-      <a href="https://madricondominioclube.com.br/" class="btn btn--orange">
-        <span>Saiba mais</span>
-        <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
-          <path d="M1 6.5h13M8.5 1l6 5.5-6 5.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </a>
+
+      <!-- Slide 1 — Tokio -->
+      <div class="hero__slide-content" data-slide="1">
+        <div class="hero__info">
+          <div class="overline overline--negative">
+            <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+            <span>LANÇAMENTO | <strong>RESIDENCIAL</strong></span>
+          </div>
+          <div class="hero__spacer"></div>
+          <div class="hero__heading">
+            <h1>Condomínio Tokio</h1>
+            <p class="hero__sub">BOITUVA – SP</p>
+          </div>
+        </div>
+        <a href="tokio" class="btn btn--orange">
+          <span>Saiba mais</span>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+            <path d="M1 6.5h13M8.5 1l6 5.5-6 5.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Slide 2 — Monções -->
+      <div class="hero__slide-content" data-slide="2">
+        <div class="hero__info">
+          <div class="overline overline--negative">
+            <img src="img/svgs/Lancamento.svg" alt="" class="overline__icon" />
+            <span>EM ANDAMENTO | <strong>RESIDENCIAL</strong></span>
+          </div>
+          <div class="hero__spacer"></div>
+          <div class="hero__heading">
+            <h1>Condomínio Monções</h1>
+            <p class="hero__sub">PORTO FELIZ – SP</p>
+          </div>
+        </div>
+        <a href="moncoes" class="btn btn--orange">
+          <span>Saiba mais</span>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+            <path d="M1 6.5h13M8.5 1l6 5.5-6 5.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Dots de navegação -->
+      <div class="hero__dots">
+        <button class="hero__dot is-active" data-goto="0" aria-label="Slide 1"></button>
+        <button class="hero__dot" data-goto="1" aria-label="Slide 2"></button>
+        <button class="hero__dot" data-goto="2" aria-label="Slide 3"></button>
+      </div>
+
     </div>
 
     <!-- Bottom bar -->
     <div class="hero__bottom">
       <div class="hero__bar-wrap">
-        <div class="hero__bar">
+
+        <!-- Bar 0 — Madrid -->
+        <div class="hero__bar is-active" data-bar="0">
           <div class="features">
             <div class="feature">
-              <div class="feature__icon">
-                <img src="img/svgs/planta.svg" alt="" />
-              </div>
+              <div class="feature__icon"><img src="img/svgs/planta.svg" alt="" /></div>
               <div class="feature__text">
                 <span class="feature__label">Plantas de</span>
                 <strong class="feature__value">42m²</strong>
               </div>
             </div>
             <div class="feature">
-              <div class="feature__icon">
-                <img src="img/svgs/dorm.svg" alt="" />
-              </div>
+              <div class="feature__icon"><img src="img/svgs/dorm.svg" alt="" /></div>
               <div class="feature__text">
                 <span class="feature__label">Dormitórios</span>
                 <strong class="feature__value">2 dorms</strong>
               </div>
             </div>
             <div class="feature">
-              <div class="feature__icon">
-                <img src="img/svgs/car.svg" alt="" />
-              </div>
+              <div class="feature__icon"><img src="img/svgs/car.svg" alt="" /></div>
               <div class="feature__text">
                 <span class="feature__label">Garagem com</span>
                 <strong class="feature__value">1 vaga</strong>
               </div>
             </div>
             <div class="feature">
-              <div class="feature__icon">
-                <img src="img/svgs/unidades.svg" alt="" />
-              </div>
+              <div class="feature__icon"><img src="img/svgs/unidades.svg" alt="" /></div>
               <div class="feature__text">
                 <span class="feature__label">Unidades</span>
                 <strong class="feature__value">192 unidades</strong>
@@ -122,18 +173,73 @@
             </div>
           </div>
         </div>
+
+        <!-- Bar 1 — Tokio -->
+        <div class="hero__bar" data-bar="1">
+          <div class="features">
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/planta.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Plantas de</span>
+                <strong class="feature__value">64m²</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/dorm.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Dormitórios</span>
+                <strong class="feature__value">2 dorms</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/car.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Garagem com</span>
+                <strong class="feature__value">1 vaga</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bar 2 — Monções -->
+        <div class="hero__bar" data-bar="2">
+          <div class="features">
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/planta.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Plantas de</span>
+                <strong class="feature__value">42m²</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/dorm.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Dormitórios</span>
+                <strong class="feature__value">2 dorms</strong>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><img src="img/svgs/car.svg" alt="" /></div>
+              <div class="feature__text">
+                <span class="feature__label">Garagem com</span>
+                <strong class="feature__value">1 vaga</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <!-- Scroll button (aparece sobre o fundo escuro do hero) -->
+      <!-- Scroll button -->
       <div class="hero__scroll">
         <span>Role para baixo</span>
         <button class="arrow-btn arrow-btn--down" aria-label="Role para baixo">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 1v14M1 8l7 7 7-7" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
+            <path d="M8 1v14M1 8l7 7 7-7" stroke="#e73c38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
     </div>
+
   </section>
 
   <!-- ═══════════════════════ DESTAQUE ═══════════════════════ -->

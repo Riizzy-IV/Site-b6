@@ -454,6 +454,55 @@ button {
   object-fit: cover;
   position: absolute;
   inset: 0;
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+
+.hero__bg-img.is-active {
+  opacity: 1;
+}
+
+/* ── Hero slide content ── */
+.hero__slide-content {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero__slide-content.is-active {
+  display: flex;
+}
+
+/* ── Hero bottom bar slides ── */
+.hero__bar {
+  display: none;
+}
+
+.hero__bar.is-active {
+  display: flex;
+}
+
+/* ── Hero dots ── */
+.hero__dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .3s, transform .3s;
+}
+
+.hero__dot.is-active {
+  background: #fff;
+  transform: scale(1.3);
 }
 
 .hero__overlay {
