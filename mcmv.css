@@ -76,6 +76,7 @@
 .mcmv-hero__stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 16px;
 }
 
@@ -308,16 +309,27 @@
   }
 
   .mcmv-hero__stats-grid {
-    flex: 0 0 400px;
+    flex: 0 0 420px;
     gap: 16px;
+    align-self: stretch;
   }
 
   .mcmv-hero__stat-card {
-    padding: 24px 20px;
+    padding: 32px 28px;
+    flex: 1;
   }
 
   .mcmv-hero__stat-value {
-    font-size: 26px;
+    font-size: 34px;
+  }
+
+  .mcmv-hero__stat-label {
+    font-size: 13px;
+  }
+
+  .mcmv-hero__stat-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .mcmv-benefits-grid {
