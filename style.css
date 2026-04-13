@@ -474,13 +474,6 @@ button {
 }
 
 /* ── Hero bottom bar slides ── */
-.hero__bar {
-  display: none;
-}
-
-.hero__bar.is-active {
-  display: flex;
-}
 
 /* ── Hero dots ── */
 .hero__dots {
@@ -582,8 +575,12 @@ button {
 .hero__bar {
   background: var(--red);
   padding: 20px;
-  display: flex;
+  display: none;
   align-items: center;
+}
+
+.hero__bar.is-active {
+  display: flex;
 }
 
 .hero__bar .features {
