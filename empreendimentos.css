@@ -64,7 +64,7 @@
   transition: background .2s, color .2s, border-color .2s;
 }
 
-.filter-btn:hover {
+.filter-btn:hover:not(.filter-btn--active) {
   border-color: var(--red, #e73c38);
   color: var(--red, #e73c38);
 }
@@ -72,6 +72,11 @@
 .filter-btn--active {
   background: var(--red, #e73c38);
   border-color: var(--red, #e73c38);
+  color: #fff;
+}
+
+.filter-btn--active:hover {
+  background: var(--red, #e73c38);
   color: #fff;
 }
 
