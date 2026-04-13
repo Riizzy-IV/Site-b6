@@ -1,7 +1,7 @@
 // Filtro de empreendimentos
 document.addEventListener('DOMContentLoaded', function () {
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card-emp');
+  const sections   = document.querySelectorAll('.emp-category[data-category]');
 
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
       filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
       btn.classList.add('filter-btn--active');
 
-      // mostra/esconde cards
-      cards.forEach(function (card) {
-        if (filter === 'todos' || card.dataset.status === filter) {
-          card.classList.remove('is-hidden');
+      // mostra/esconde seções por categoria
+      sections.forEach(function (section) {
+        if (filter === 'todos' || section.dataset.category === filter) {
+          section.style.display = '';
         } else {
-          card.classList.add('is-hidden');
+          section.style.display = 'none';
         }
       });
     });
