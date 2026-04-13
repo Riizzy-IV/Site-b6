@@ -5,44 +5,59 @@
 /* ── Page Hero ── */
 .mcmv-page-hero {
   background: #fff;
-  padding: 88px 0 0;
+  padding-top: 80px;
   border-bottom: 1px solid #e8e8e8;
 }
 
+/* ── Hero body (stacked) ── */
+.mcmv-hero__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0 48px;
+  max-width: 680px;
+}
+
+/* ── Badge: logo + label ── */
+.mcmv-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0faf4;
+  border: 1px solid #c3e6d1;
+  border-radius: 40px;
+  padding: 6px 16px 6px 8px;
+  align-self: flex-start;
+}
+
 .mcmv-page__logo {
-  width: 96px;
-  height: auto;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
-/* ── Hero top row: logo + body ── */
-.mcmv-hero__top {
-  display: flex;
-  align-items: flex-start;
-  gap: 28px;
-  padding-bottom: 40px;
+.mcmv-hero__badge span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e7a44;
 }
 
-.mcmv-hero__top-body {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mcmv-hero__top-body h1 {
-  font-size: 30px;
+/* ── Headline ── */
+.mcmv-hero__body h1 {
+  font-size: 32px;
   font-weight: 700;
   color: #1e1e1e;
   line-height: 1.2;
   margin: 0;
 }
 
-.mcmv-hero__top-body p {
+/* ── Description ── */
+.mcmv-hero__body p {
   font-size: 15px;
   color: #626261;
   line-height: 1.7;
   margin: 0;
-  max-width: 560px;
 }
 
 /* ── Hero actions (botões) ── */
@@ -70,15 +85,15 @@
   color: #fff;
 }
 
-/* ── Hero stats bar ── */
+/* ── Hero stats bar — full width ── */
 .mcmv-hero__stats-bar {
-  display: flex;
-  align-items: center;
-  gap: 0;
   border-top: 1px solid #e8e8e8;
   background: #f7f7f7;
-  margin: 0 -20px;
-  padding: 0 20px;
+}
+
+.mcmv-hero__stats-inner {
+  display: flex;
+  align-items: center;
 }
 
 .mcmv-hero__stat {
@@ -86,7 +101,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 20px 16px;
+  padding: 20px 0;
 }
 
 .mcmv-hero__stat-div {
@@ -94,6 +109,7 @@
   height: 36px;
   background: #e0e0e0;
   flex-shrink: 0;
+  margin: 0 20px;
 }
 
 .mcmv-hero__stat-value {
@@ -290,13 +306,12 @@
    DESKTOP  ≥ 1024px
    ══════════════════════════════════════════ */
 @media (min-width: 768px) {
-  .mcmv-hero__stats-bar {
-    margin: 0 -40px;
-    padding: 0 40px;
+  .mcmv-hero__body h1 {
+    font-size: 40px;
   }
 
   .mcmv-hero__stat-value {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
@@ -305,26 +320,17 @@
     padding-top: 100px;
   }
 
-  .mcmv-hero__top-body h1 {
-    font-size: 42px;
+  .mcmv-hero__body {
+    padding: 56px 0 64px;
+    max-width: 720px;
   }
 
-  .mcmv-hero__top {
-    gap: 40px;
-    padding-bottom: 48px;
-  }
-
-  .mcmv-hero__stats-bar {
-    margin: 0 -40px;
-    padding: 0 40px;
-  }
-
-  .mcmv-hero__stat {
-    padding: 24px 24px;
+  .mcmv-hero__body h1 {
+    font-size: 48px;
   }
 
   .mcmv-hero__stat-value {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .mcmv-hero__stat-label {
