@@ -1,23 +1,26 @@
-// Filtro de empreendimentos
+// Filtro de categoria (via link do menu, ex: ?filter=comerciais)
 document.addEventListener('DOMContentLoaded', function () {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const sections   = document.querySelectorAll('.emp-category[data-category]');
+  const sections = document.querySelectorAll('.emp-category[data-category]');
+  const filterParam = new URLSearchParams(window.location.search).get('filter');
 
-  filterBtns.forEach(function (btn) {
+  if (filterParam && filterParam !== 'todos') {
+    sections.forEach(function (section) {
+      section.style.display = section.dataset.category === filterParam ? '' : 'none';
+    });
+  }
+
+  // Subfiltro de status, apenas na seção Residencial (condomínios)
+  const statusBtns = document.querySelectorAll('.emp-subfilters .filter-btn');
+  const residencialCards = document.querySelectorAll('.emp-category[data-category="condominios"] .card-emp[data-status]');
+
+  statusBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const filter = btn.dataset.filter;
-
-      // atualiza botão ativo
-      filterBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
+      statusBtns.forEach(function (b) { b.classList.remove('filter-btn--active'); });
       btn.classList.add('filter-btn--active');
 
-      // mostra/esconde seções por categoria
-      sections.forEach(function (section) {
-        if (filter === 'todos' || section.dataset.category === filter) {
-          section.style.display = '';
-        } else {
-          section.style.display = 'none';
-        }
+      const status = btn.dataset.status;
+      residencialCards.forEach(function (card) {
+        card.style.display = (status === 'todos' || card.dataset.status === status) ? '' : 'none';
       });
     });
   });

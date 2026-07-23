@@ -30,6 +30,31 @@ if (hamburger && menuNav) {
   });
 }
 
+// ── Dropdown menu ──
+const dropdown = document.querySelector('.menu__dropdown');
+const dropdownToggle = document.querySelector('.menu__dropdown-toggle');
+if (dropdown && dropdownToggle) {
+  dropdownToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = dropdown.classList.toggle('is-open');
+    dropdownToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.menu__dropdown')) {
+      dropdown.classList.remove('is-open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {
+      dropdown.classList.remove('is-open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 // ── Hero Slider ──
 (function () {
   const bgs      = document.querySelectorAll('.hero__bg-img');

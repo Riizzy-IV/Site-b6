@@ -80,6 +80,13 @@
   color: #fff;
 }
 
+.emp-subfilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+
 /* ── Grid de cards ── */
 .emp-grid-section {
   background: #fff;

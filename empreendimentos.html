@@ -25,7 +25,17 @@
       <span class="menu__dot"></span>
       <a href="sobre" class="menu__link">Sobre a B6</a>
       <span class="menu__dot"></span>
-      <a href="empreendimentos" class="menu__link menu__link--active">Empreendimentos</a>
+      <div class="menu__dropdown">
+        <button class="menu__link menu__dropdown-toggle menu__link--active" aria-expanded="false">
+          Empreendimentos
+          <svg class="menu__dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__dropdown-menu">
+          <a href="empreendimentos?filter=condominios" class="menu__dropdown-item">Residencial</a>
+          <a href="empreendimentos?filter=comerciais" class="menu__dropdown-item">Comerciais</a>
+          <a href="empreendimentos?filter=industriais" class="menu__dropdown-item">Industriais</a>
+        </div>
+      </div>
       <span class="menu__dot"></span>
       <a href="mcmv" class="menu__link">MCMV</a>
       <span class="menu__dot"></span>
@@ -66,27 +76,25 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ FILTROS ═══════════════════════ -->
-  <section class="emp-filters">
-    <div class="u-container emp-filters__inner">
-      <button class="filter-btn filter-btn--active" data-filter="todos">Todos</button>
-      <button class="filter-btn" data-filter="condominios">Condomínios</button>
-      <button class="filter-btn" data-filter="comerciais">Comerciais</button>
-      <button class="filter-btn" data-filter="industriais">Industriais</button>
-    </div>
-  </section>
-
   <!-- ═══════════════════════ CONDOMÍNIOS ═══════════════════════ -->
   <section class="emp-grid-section emp-category" data-category="condominios">
     <div class="u-container">
       <div class="emp-category__header">
-        <span class="emp-category__tag">Condomínios</span>
+        <span class="emp-category__tag">Residencial</span>
         <div class="emp-category__line"></div>
       </div>
+
+      <div class="emp-subfilters">
+        <button class="filter-btn filter-btn--active" data-status="todos">Todos</button>
+        <button class="filter-btn" data-status="breve">Breve lançamento</button>
+        <button class="filter-btn" data-status="lancamento">Lançamento</button>
+        <button class="filter-btn" data-status="entregue">Entregue</button>
+      </div>
+
       <div class="emp-grid">
 
         <!-- Madrid Condomínio Clube -->
-        <a href="https://madridcondominioclube.com.br/" target="_blank" rel="noopener" class="card-emp">
+        <a href="https://madridcondominioclube.com.br/" target="_blank" rel="noopener" class="card-emp" data-status="lancamento">
           <div class="card-emp__bg">
             <img src="img/madrid/madrid-1.avif" alt="Madrid Condomínio Clube" />
             <div class="card-emp__overlay"></div>
@@ -125,7 +133,7 @@
         </a>
 
         <!-- Condomínio Tokio -->
-        <a href="pages/tokio" class="card-emp">
+        <a href="pages/tokio" class="card-emp" data-status="lancamento">
           <div class="card-emp__bg">
             <img src="img/svgs/tokio.jpg" alt="Condomínio Tokio" />
             <div class="card-emp__overlay"></div>
@@ -164,7 +172,7 @@
         </a>
 
         <!-- Condomínio Monções -->
-        <a href="pages/moncoes" class="card-emp">
+        <a href="pages/moncoes" class="card-emp" data-status="lancamento">
           <div class="card-emp__bg">
             <img src="img/svgs/mon.jpg" alt="Condomínio Monções" />
             <div class="card-emp__overlay"></div>
@@ -203,7 +211,7 @@
         </a>
 
         <!-- Residencial Faculdade -->
-        <a href="pages/residencial-faculdade" class="card-emp">
+        <a href="pages/residencial-faculdade" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/faculdade-capa.jpg" alt="Residencial Faculdade" />
             <div class="card-emp__overlay"></div>
@@ -219,7 +227,7 @@
         </a>
 
         <!-- Residencial Riviera -->
-        <a href="pages/residencial-riviera" class="card-emp">
+        <a href="pages/residencial-riviera" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/riviera-capa.jpg" alt="Residencial Riviera" />
             <div class="card-emp__overlay"></div>
@@ -235,7 +243,7 @@
         </a>
 
         <!-- Residencial Bonvent -->
-        <a href="pages/residencial-bonvent" class="card-emp">
+        <a href="pages/residencial-bonvent" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/bonvent-capa.jpg" alt="Residencial Bonvent" />
             <div class="card-emp__overlay"></div>
@@ -251,7 +259,7 @@
         </a>
 
         <!-- Edifício Desembargador Amaral Vieira -->
-        <a href="pages/amaral-vieira" class="card-emp">
+        <a href="pages/amaral-vieira" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/amaral-vieira-capa.jpg" alt="Edifício Desembargador Amaral Vieira" />
             <div class="card-emp__overlay"></div>
@@ -267,7 +275,7 @@
         </a>
 
         <!-- Residencial Paris -->
-        <a href="pages/residencial-paris" class="card-emp">
+        <a href="pages/residencial-paris" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/paris-capa.jpg" alt="Residencial Paris" />
             <div class="card-emp__overlay"></div>
@@ -283,7 +291,7 @@
         </a>
 
         <!-- Real Parque -->
-        <a href="pages/real-parque" class="card-emp">
+        <a href="pages/real-parque" class="card-emp" data-status="entregue">
           <div class="card-emp__bg">
             <img src="img/empreendimentos/real-parque-capa.jpg" alt="Real Parque" />
             <div class="card-emp__overlay"></div>

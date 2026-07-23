@@ -24,7 +24,17 @@
       <span class="menu__dot"></span>
       <a href="../sobre" class="menu__link">Sobre a B6</a>
       <span class="menu__dot"></span>
-      <a href="../empreendimentos" class="menu__link menu__link--active">Empreendimentos</a>
+      <div class="menu__dropdown">
+        <button class="menu__link menu__dropdown-toggle" aria-expanded="false">
+          Empreendimentos
+          <svg class="menu__dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__dropdown-menu">
+          <a href="../empreendimentos?filter=condominios" class="menu__dropdown-item">Residencial</a>
+          <a href="../empreendimentos?filter=comerciais" class="menu__dropdown-item">Comerciais</a>
+          <a href="../empreendimentos?filter=industriais" class="menu__dropdown-item">Industriais</a>
+        </div>
+      </div>
       <span class="menu__dot"></span>
       <a href="../contato" class="menu__link">Contato</a>
       <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red menu__cta--mobile">

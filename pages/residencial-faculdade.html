@@ -24,7 +24,17 @@
       <span class="menu__dot"></span>
       <a href="../sobre" class="menu__link">Sobre a B6</a>
       <span class="menu__dot"></span>
-      <a href="../empreendimentos" class="menu__link menu__link--active">Empreendimentos</a>
+      <div class="menu__dropdown">
+        <button class="menu__link menu__dropdown-toggle" aria-expanded="false">
+          Empreendimentos
+          <svg class="menu__dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu__dropdown-menu">
+          <a href="../empreendimentos?filter=condominios" class="menu__dropdown-item">Residencial</a>
+          <a href="../empreendimentos?filter=comerciais" class="menu__dropdown-item">Comerciais</a>
+          <a href="../empreendimentos?filter=industriais" class="menu__dropdown-item">Industriais</a>
+        </div>
+      </div>
       <span class="menu__dot"></span>
       <a href="../contato" class="menu__link">Contato</a>
       <a href="https://wa.me/5515974049512" target="_blank" rel="noopener" class="btn btn--red menu__cta--mobile">
@@ -68,25 +78,10 @@
       <div class="emp-gallery" id="empGallery">
         <div class="emp-gallery__track">
           <div class="emp-gallery__slide is-active">
-            <img src="https://lh3.googleusercontent.com/d/1inBx9y5u4bPYV6B2qtHf4IsTwu6rRL-v" alt="Residencial Faculdade" />
+            <img src="../img/empreendimentos/faculdade/faculdade-novo-01.png" alt="Residencial Faculdade" />
           </div>
           <div class="emp-gallery__slide">
-            <img src="https://lh3.googleusercontent.com/d/1uzJRjBU71S-x0eEuVQpoX0G23ta94eGo" alt="Residencial Faculdade" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/faculdade/DSC02156.JPG.jpg" alt="Residencial Faculdade" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/faculdade/DSC02158.JPG.jpg" alt="Residencial Faculdade" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/faculdade/DSC02159.JPG.jpg" alt="Residencial Faculdade" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/faculdade/Imagem2.jpg" alt="Residencial Faculdade" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/faculdade/Imagem3.jpg" alt="Residencial Faculdade" />
+            <img src="../img/empreendimentos/faculdade/faculdade-novo-02.png" alt="Residencial Faculdade" />
           </div>
         </div>
         <button class="emp-gallery__btn emp-gallery__btn--prev" aria-label="Imagem anterior">
@@ -99,7 +94,7 @@
             <path d="M1 1l10 9-10 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
-        <div class="emp-gallery__counter" id="galleryCounter">1 / 7</div>
+        <div class="emp-gallery__counter" id="galleryCounter">1 / 2</div>
       </div>
     </div>
   </section>
