@@ -344,6 +344,7 @@
 .cert-tabs {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   background: rgba(0, 0, 0, .25);
   position: relative;
   z-index: 3;
@@ -354,22 +355,28 @@
   align-items: center;
   gap: 10px;
   padding: 18px 20px;
-  background: none;
+  background: rgba(255, 255, 255, .06);
   border: none;
   border-bottom: 3px solid transparent;
   cursor: pointer;
   font-family: var(--font);
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .7);
   letter-spacing: 0.8px;
   text-align: left;
-  transition: color .2s;
+  transition: color .2s, background .2s;
+}
+
+.cert-tab:hover {
+  background: rgba(255, 255, 255, .14);
+  color: #fff;
 }
 
 .cert-tab.is-active {
   color: #fff;
-  border-bottom-color: #fff;
+  background: var(--red, #e73c38);
+  border-bottom-color: var(--red, #e73c38);
 }
 
 .cert-tab svg {
@@ -377,7 +384,8 @@
   opacity: 0.6;
 }
 
-.cert-tab.is-active svg {
+.cert-tab.is-active svg,
+.cert-tab:hover svg {
   opacity: 1;
 }
 
