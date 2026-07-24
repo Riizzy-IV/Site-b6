@@ -1784,9 +1784,9 @@ button {
   }
 
   .card-imovel {
-    flex: 1;
+    flex: 0 0 calc((100% - 24px) / 2);
     min-width: 0;
-    width: auto;
+    width: calc((100% - 24px) / 2);
     height: 520px;
   }
 
@@ -2110,6 +2110,15 @@ button {
     z-index: 200;
   }
 
+  .menu__dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    height: 14px;
+  }
+
   .menu__dropdown:hover .menu__dropdown-menu {
     display: block;
   }
@@ -2268,13 +2277,12 @@ button {
   .cards-wrap {
     padding: 4px 0 16px;
     gap: 28px;
-    overflow: hidden;
   }
 
   .card-imovel {
-    flex: 1;
+    flex: 0 0 calc((100% - 56px) / 3);
     min-width: 0;
-    width: auto;
+    width: calc((100% - 56px) / 3);
     height: 580px;
   }
 
@@ -2467,9 +2475,9 @@ button {
   }
 
   .card-imovel {
-    flex: 1;
+    flex: 0 0 calc((100% - 64px) / 3);
     min-width: 0;
-    width: auto;
+    width: calc((100% - 64px) / 3);
     height: 626px;
   }
 

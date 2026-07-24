@@ -248,11 +248,26 @@
 
 /* ── Placeholder card (no photo) ── */
 .card-emp--placeholder {
-  background: #1e2a3a;
+  background: linear-gradient(160deg, #26384d 0%, #1e2a3a 100%);
 }
 
 .card-emp--placeholder .card-emp__overlay {
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%);
+}
+
+.card-emp__placeholder-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-emp__placeholder-icon img {
+  width: 96px;
+  height: 96px;
+  opacity: .18;
+  filter: brightness(0) invert(1);
 }
 
 /* ── Date on card ── */
