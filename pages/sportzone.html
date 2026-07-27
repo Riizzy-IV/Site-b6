@@ -78,10 +78,10 @@
       <div class="emp-gallery" id="empGallery">
         <div class="emp-gallery__track">
           <div class="emp-gallery__slide is-active">
-            <img src="https://lh3.googleusercontent.com/d/1ytpm7waSB6qGMgHv4rRjQeNyKVqWC1XP" alt="" />
+            <img src="../img/empreendimentos/sportzone/sportzone-1.jpg" alt="Sportzone" />
           </div>
           <div class="emp-gallery__slide">
-            <img src="https://lh3.googleusercontent.com/d/1Rilzaa1ewM4Zz_BtrOik_sp5tsFMsI9G" alt="" />
+            <img src="../img/empreendimentos/sportzone/sportzone-2.jpg" alt="Sportzone - piscina" />
           </div>
         </div>
         <button class="emp-gallery__btn emp-gallery__btn--prev" aria-label="Imagem anterior">
@@ -198,8 +198,10 @@
         slides[current].classList.add("is-active");
         if (counter) counter.textContent = (current + 1) + " / " + total;
       }
-      gallery.querySelector(".emp-gallery__btn--prev").addEventListener("click", () => goTo(current - 1));
-      gallery.querySelector(".emp-gallery__btn--next").addEventListener("click", () => goTo(current + 1));
+      const prevBtn = gallery.querySelector(".emp-gallery__btn--prev");
+      const nextBtn = gallery.querySelector(".emp-gallery__btn--next");
+      if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
+      if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
     })();
   </script>
 </body>
