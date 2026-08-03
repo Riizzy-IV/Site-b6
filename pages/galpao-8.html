@@ -78,26 +78,9 @@
       <div class="emp-gallery" id="empGallery">
         <div class="emp-gallery__track">
           <div class="emp-gallery__slide is-active">
-            <img src="../img/empreendimentos/galpao-8/F1-.JPG.jpg" alt="Galpão 8" />
-          </div>
-          <div class="emp-gallery__slide">
-            <img src="../img/empreendimentos/galpao-8/F2.jpg" alt="Galpão 8" />
-          </div>
-          <div class="emp-gallery__slide">
             <img src="../img/empreendimentos/galpao-8/DSC02279.JPG.jpg" alt="Galpão 8" />
           </div>
         </div>
-        <button class="emp-gallery__btn emp-gallery__btn--prev" aria-label="Imagem anterior">
-          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
-            <path d="M11 1L1 10l10 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <button class="emp-gallery__btn emp-gallery__btn--next" aria-label="Próxima imagem">
-          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
-            <path d="M1 1l10 9-10 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="emp-gallery__counter" id="galleryCounter">1 / 3</div>
       </div>
     </div>
   </section>
@@ -170,7 +153,7 @@
         </nav>
         <hr class="footer__divider" />
         <div class="footer__contact-info">
-          <div class="footer__contact-item"><img src="../img/loc.svg" alt="" /><span>Rua Expedicion&#225;rio Souza Filho, 40 &#8211; Centro, Boituva &#8211; SP, CEP 18550-105</span></div>
+          <div class="footer__contact-item"><img src="../img/loc.svg" alt="" /><span>Rua Expedicion&#225;rio Souza Filho, 50 &#8211; Centro, Boituva &#8211; SP, CEP 18550-105</span></div>
           <div class="footer__contact-item"><img src="../img/svgs/email.svg" alt="" /><a href="mailto:contato@construtorab6.com.br">contato@construtorab6.com.br</a></div>
           <div class="footer__contact-item"><img src="../img/svgs/whats.svg" alt="" /><a href="https://wa.me/5515988117788">(15) 98811-7788</a></div>
         </div>
@@ -201,8 +184,10 @@
         slides[current].classList.add("is-active");
         if (counter) counter.textContent = (current + 1) + " / " + total;
       }
-      gallery.querySelector(".emp-gallery__btn--prev").addEventListener("click", () => goTo(current - 1));
-      gallery.querySelector(".emp-gallery__btn--next").addEventListener("click", () => goTo(current + 1));
+      const prevBtn = gallery.querySelector(".emp-gallery__btn--prev");
+      const nextBtn = gallery.querySelector(".emp-gallery__btn--next");
+      if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
+      if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
     })();
   </script>
 </body>
